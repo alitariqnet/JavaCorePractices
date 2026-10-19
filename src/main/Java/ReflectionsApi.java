@@ -2,6 +2,7 @@ package Java;
 
 import java.io.Console;
 import java.lang.Class;
+import java.lang.reflect.Method;
 
 import static Java.ReflectionsApi.E.A;
 
@@ -20,5 +21,9 @@ public class ReflectionsApi {
         Class c3 = bytes.getClass();
         System.out.println(c3);
 
+//        Method[]methods = ReflectionsApi.getClass().getDeclaredMethods();
+
     }
 }
+
+
