@@ -165,6 +165,11 @@ public class Collection {
         number = 10;
         System.out.println(number);
 
+        Optional<String> opstr = Optional.empty();
+        System.out.println(opstr);
+        System.out.println(opstr.isPresent());
+        String str = null;
+        System.out.println(str.toLowerCase(Locale.ROOT));
     }
     static final int MAXIMUM_CAPACITY = 1 << 30;
 
