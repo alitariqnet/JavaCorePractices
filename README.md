@@ -1,2 +1,2 @@
-# Java Best Practices
+# Java Core Practices
  Random core Java programming practices
