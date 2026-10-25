@@ -103,7 +103,9 @@ public class Collection {
 
         System.out.println("Calculate table size for 100 -> "+tableSizeFor(100));
         // Does not maintain order of insertion
-        Set<String> hs = new HashSet<>();
+        Set<String> hs = null;
+        System.out.println(hs);
+        hs = new HashSet<>();
         hs.add("S");
         hs.add("Z");
         hs.add("F");
@@ -144,6 +146,25 @@ public class Collection {
         Element Z processed by: main
         [7, 6, 9, 3, 5]
          */
+
+        List list = Collections.synchronizedList(new LinkedList());
+        list.add("abc");
+        list.add("def");
+        list.add("ghi");
+        list.add("jkl");
+        list.add("mno");
+        list.add("pqr");
+        list.add("stu");
+        list.add("vwx");
+        list.add("yz");
+        System.out.println(list);
+
+        Iterator<String> ite;
+
+        Number number;
+        number = 10;
+        System.out.println(number);
+
     }
     static final int MAXIMUM_CAPACITY = 1 << 30;
 
