@@ -22,7 +22,8 @@ public class MemoryManagement {
         names.add("Hassan");
         names.add("Hira");
         for(String name: names){
-            printMemoryAddress(name);
+            System.out.println(getMemoryAddress(name));
+//            printMemoryAddress(name);
         }
         System.out.println("----------------");
         List<String> _names = new LinkedList<>();
