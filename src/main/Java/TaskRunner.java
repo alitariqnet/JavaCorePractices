@@ -2,8 +2,8 @@ package Java;
 
 public class TaskRunner {
 
-    private static int number;
-    private static boolean ready;
+    private volatile static int number;
+    private volatile static boolean ready;
 
     private static class Reader extends Thread {
 
@@ -23,6 +23,8 @@ public class TaskRunner {
     }
 
     public static void main(String[] args) {
+        System.out.println(number);
+        System.out.println(ready);
         new Reader().start();
         System.out.println("line 22");
         number = 42;
@@ -53,6 +55,15 @@ public class TaskRunner {
 //        line 21
 
 //      Output(more often):
+//        line 22
+//        line 24
+//        line 26
+//        line 12
+//        line 18
+//        42
+//        line 21
+
+//        Using volatile with both variables output always:
 //        line 22
 //        line 24
 //        line 26
